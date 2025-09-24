@@ -1,5 +1,6 @@
 var _grid = null;
 var _selectedCell = null;
+const _cellSize = 20;
 
 function onCellEnter(e) {
     let cell = e.target;
@@ -26,8 +27,8 @@ function createGrid(size) {
     grid.className = 'grid';
     grid.style.display = 'grid';
     grid.style.gridTemplate = `repeat(${size}, 1fr)/repeat(${size}, 1fr)`;
-    grid.style.width = 12 * size + 'px';
-    grid.style.height = 12 * size + 'px';
+    grid.style.width = _cellSize * size + 'px';
+    grid.style.height = _cellSize * size + 'px';
     for (let gi=0; gi<size; gi++) {
         for (let gj=0; gj<size; gj++) {
             let cell = document.createElement('div');
