@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+div.grid {
+    margin: 0 auto;
+    width: 0px;
+    height: 0px;
+    border: solid 2px blue;
+    overflow: auto;
+}
+div.grid>div {
+    border: outset 1px #80808080;
+}
+
+div.grid>div.lit {
+    background-color: #80a0ff80;
+}
+
+div.grid>div.selected {
+    background-color: #80a0ffff;
+}
